@@ -38,12 +38,15 @@ function App() {
   }
 
   function searchToState(xx) {
+    
     changeStateSearch(xx)
+    console.log(xx, ' xx')
     getPokemonInfo()
+    console.log(stateSearch, ' esta es state search')
   }
 
   return (
-    <div class="text-center">
+    <div className="text-center">
  
       <h1 >How many pokemons can you name? <BadgeConditional isLoggedIn={(pokeInfoOrganized.length>0)} /></h1>
       <br />
