@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/mascotSpelling/static/css/main.d1b05096.chunk.css",
+    "main.js": "/mascotSpelling/static/js/main.0434b073.chunk.js",
+    "main.js.map": "/mascotSpelling/static/js/main.0434b073.chunk.js.map",
+    "runtime-main.js": "/mascotSpelling/static/js/runtime-main.69453f12.js",
+    "runtime-main.js.map": "/mascotSpelling/static/js/runtime-main.69453f12.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/mascotSpelling/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.178ac07d.chunk.js": "/mascotSpelling/static/js/2.178ac07d.chunk.js",
+    "static/js/2.178ac07d.chunk.js.map": "/mascotSpelling/static/js/2.178ac07d.chunk.js.map",
+    "index.html": "/mascotSpelling/index.html",
+    "precache-manifest.c57468b7150dccacac1bead559cd051e.js": "/mascotSpelling/precache-manifest.c57468b7150dccacac1bead559cd051e.js",
+    "service-worker.js": "/mascotSpelling/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/mascotSpelling/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.d1b05096.chunk.css.map": "/mascotSpelling/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.178ac07d.chunk.js.LICENSE.txt": "/mascotSpelling/static/js/2.178ac07d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69453f12.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.178ac07d.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.0434b073.chunk.js"
+  ]
+}
