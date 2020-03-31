@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import './App.css';
 import Child from './Child';
 import CardPoke from './CardPoke';
@@ -7,23 +7,42 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Badge from 'react-bootstrap/badge';
 
 
+
+function BadgeConditional(props) {
+  const isLoggedIn = props.isLoggedIn.length > 0;
+  const howMany = props.isLoggedIn.length
+  if (isLoggedIn) {
+    return <Badge variant="info">{howMany}  </Badge>;
+  }
+  return null;
+}
+
+
+
+
 function App() {
-   const [stateSearch, changeStateSearch] = useState([])
-   const [pokeInfoOrganized, changePokeInfoOrganized] = useState([])
+ 
 
+  const [pokeInfoOrganized, changePokeInfoOrganized] = useState([])
+  const [stateSearch, changeStateSearch] = useState([]);
+  
 
+  function searchToState(xx) {
+    
+    
+    changeStateSearch(xx)
 
-  function BadgeConditional(props) {
-    const isLoggedIn = props.isLoggedIn;
-    if (isLoggedIn) {
-      return <Badge variant="info">{pokeInfoOrganized.length}  </Badge>;
-    }
-    return null;
+    console.log(xx, ' xx')
+
+    console.log(stateSearch, ' esta es state search')
   }
 
+  React.useEffect(() => { getPokemonInfo() }, [stateSearch]);
 
-   
-  function getPokemonInfo(){
+  function getPokemonInfo() {
+
+    if (stateSearch.length>0){
+    
     axios.get(`https://pokeapi.co/api/v2/pokemon/${stateSearch}/`)
       .then(function (response) {
         let image = JSON.stringify(response.data.sprites.front_default).substring(1, JSON.stringify(response.data.sprites.front_default).length - 1)
@@ -33,29 +52,15 @@ function App() {
 
         let arrayOfSpecs = [image, name, weight, base_experience]
         changePokeInfoOrganized([...pokeInfoOrganized, arrayOfSpecs])
-      }).catch(error => { alert(stateSearch +' is not a pokemon') })
-      
+      }).catch(error => { alert(stateSearch + ' is not a pokemon') })
   }
-
-  function searchToState(xx) {
-    
-    changeStateSearch(xx)
-    console.log(xx, ' xx')
-    getPokemonInfo()
-    console.log(stateSearch, ' esta es state search')
-  }
-
+}
   return (
     <div className="text-center">
- 
-      <h1 >How many pokemons can you name? <BadgeConditional isLoggedIn={(pokeInfoOrganized.length>0)} /></h1>
+      <h1 >How many pokemons can you name? <BadgeConditional isLoggedIn={(pokeInfoOrganized)} /></h1>
       <br />
- 
       <Child inputSearch={searchToState}/>
       <CardPoke pokeInfoOrganized={pokeInfoOrganized} />   
-
-
-
     </div>
   );
 }

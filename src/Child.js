@@ -12,7 +12,6 @@ class Child extends Component {
 
         const name = this._name.value;
         // do something with `name`
-        alert(this._name.value)
         changeStateSearch(name)
         this.props.inputSearch(stateSearch)
     }
@@ -21,7 +20,7 @@ class Child extends Component {
         
         const name = this._name.value;
         // do something with `name`
-        alert(this._name.value)
+
         this.props.inputSearch(name)
     }
 
