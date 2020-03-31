@@ -24,6 +24,7 @@ function App() {
  
 
   const [pokeInfoOrganized, changePokeInfoOrganized] = useState([])
+  const [pokeName, changePokeName] = useState([])
   const [stateSearch, changeStateSearch] = useState([]);
   
 
@@ -31,13 +32,10 @@ function App() {
     
     
     changeStateSearch(xx)
-
-    console.log(xx, ' xx')
-
-    console.log(stateSearch, ' esta es state search')
   }
 
   React.useEffect(() => { getPokemonInfo() }, [stateSearch]);
+
 
   function getPokemonInfo() {
 
@@ -52,8 +50,11 @@ function App() {
 
         let arrayOfSpecs = [image, name, weight, base_experience]
         changePokeInfoOrganized([...pokeInfoOrganized, arrayOfSpecs])
+        changePokeName( name )
+        console.log(pokeName)
       }).catch(error => { alert(stateSearch + ' is not a pokemon') })
   }
+    
 }
   return (
     <div className="text-center">

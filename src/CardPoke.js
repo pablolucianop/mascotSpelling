@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/row';
 
 function CardPoke(props) {
     const a = <Row>
+
         {props.pokeInfoOrganized.map((num) => {
             return (
                 <div >
@@ -24,7 +25,9 @@ function CardPoke(props) {
                 </div>
             )
         }
-        )}
+        )
+        
+        }
     </Row >
     return ( a );
 }
