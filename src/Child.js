@@ -21,14 +21,14 @@ class Child extends Component {
         const name = this._name.value;
         // do something with `name`
 
-        this.props.inputSearch(name)
+        this.props.inputSearch(name.toLowerCase())
     }
 
     render() {
         return (
             <div>
                 <input type="text" ref={input => this._name = input} />
-                <button onClick={this.handleSubmitClick}>Sign up</button>
+                <button onClick={this.handleSubmitClick}>check it!</button>
             </div>
         );
     }
