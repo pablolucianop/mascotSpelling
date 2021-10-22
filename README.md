@@ -2,8 +2,7 @@
  
  Simple react app that challenges you to name pokemons, and lists the ones that you spelled correctly. 
 
-![list of pokemons made in the app](src/img/pokemonSpellingInAction.png)
-
+[![list of pokemons made in the app](src/img/pokemonSpellingInAction.png)](https://pablolucianop.github.io/mascotSpelling/)
 
 ## <a href="https://pablolucianop.github.io/mascotSpelling/" target="_blank" rel="noopener noreferrer">DEMO</a>
 
